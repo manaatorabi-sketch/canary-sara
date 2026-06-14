@@ -1,0 +1,498 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #82baea;
+    font-family: 'Arial', sans-serif;
+    background-image: none;
+}
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; /* ممکن است بخواهید وزن فونت را برای عناوین تغییر دهید */
+}
+.ballon.burst {
+    transform: scale(1.5) rotate(30deg); /* بزرگ شدن و چرخش */
+    opacity: 0; /* ناپدید شدن */
+}
+
+.ballon {
+    width: 80px;
+    height: 80px;
+    background-color: #ff6347;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.ballon:nth-child(1) {
+    left: 2%;
+    bottom: 20%;
+}
+
+.ballon:nth-child(2) {
+    left: 20%;
+    bottom: 10%;
+    background: radial-gradient(circle at 50% 30%, #7effaf);
+}
+
+.ballon:nth-child(3) {
+    left: 5%;
+    bottom: 25%;
+    background: radial-gradient(circle at 50% 30%, #74b9ff, #0984e3);
+}
+
+.ballon:nth-child(4) {
+    left: 4%;
+    bottom: 10%;
+    background: radial-gradient(circle at 50% 30%, #d937cc, #f709ff75);
+}
+
+.ballon:nth-child(5) {
+    left: 3%;
+    bottom: 20%;
+    background: radial-gradient(circle at 50% 30%, #e8ff74, #d5d675);
+}
+
+.ballon:nth-child(6) {
+    left: 2%;
+    bottom: 10%;
+    background: radial-gradient(circle at 50% 30%, #ff7484, #d66d6d);
+}
+
+.ballon:nth-child(7) {
+    left: 1%;
+    bottom: 15%;
+    background: radial-gradient(circle at 50% 30%, #74e6ff, #09d4e3);
+}
+
+.ballon:nth-child(8) {
+    left: 9%;
+    bottom: 20%;
+    background: radial-gradient(circle at 50% 30%, #8e74ff,#8e74ff);
+}
+
+.ballon:nth-child(9) {
+    left: 1.5%;
+    bottom: 25%;
+    background: radial-gradient(circle at 50% 30%, #74ff82, #09e3bb);
+}
+
+.ballon:nth-child(10) {
+    left: 4%;
+    bottom: 25%;
+    background: radial-gradient(circle at 50% 30%, #7974ff, #0984e3);
+}
+.ballon:nth-child(11) {
+    left: 4%;
+    bottom: 25%;
+    background: radial-gradient(circle at 50% 30%, #74b5ff, #8bacc5);
+}
+.ballon.pop {
+    transform: scale(1.5);
+    opacity: 0;
+}
+
+.ballon::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 3px;
+    height: 80px;
+    background-color: brown;
+    transform: translateX(-50%) rotate(5deg);
+    border-radius: 2px;
+    animation: wave 2s infinite ease-in-out;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(-50%) rotate(5deg);
+    }
+
+    25% {
+        transform: translateX(-50%) rotate(-6deg);
+    }
+
+    50% {
+        transform: translateX(-50%) rotate(4deg);
+    }
+
+    75% {
+        transform: translateX(-50%) rotate(-8deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(5deg);
+    }
+}
+
+.timer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2em;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(30, 74, 220, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: rgb(221, 23, 23);
+    font-family: 'Arial', sans-serif;
+    display: none;
+    z-index: 2000;
+    text-shadow: 2px 2px 5px white;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(-5deg); }
+}
+.button-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: auto; /* حذف تنظیم left */
+  
+    /* width: auto; */ /* می توانیم عرض را هم ثابت کنیم تا دکمه ها منظم تر شوند */
+    width: 220px; /* عرض کلی کانتینر را کمی بیشتر از دکمه ها می گیریم تا جا داشته باشد */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* این همچنان دکمه ها را به سمت راست می برد */
+    padding: 10px; /* فاصله کلی کانتینر از لبه های صفحه */
+    box-sizing: border-box;
+    z-index: 1000;
+}
+  
+.btn {
+    /* سبک های پایه دکمه ها */
+    background-color: #4CAF50;
+    color: white;
+    /* padding: 15px 25px; */ /* کاهش padding */
+    padding: 10px 15px; /* padding کوچکتر */
+    border: none;
+    cursor: pointer;
+    margin-left: 10px; /* فاصله از لبه سمت چپ کانتینر */
+    margin-bottom: 10px; /* فاصله از دکمه پایینی */
+    /* width: 200px; */ /* کاهش عرض */
+    width: 180px; /* عرض کوچکتر برای دکمه */
+    text-align: center;
+    font-size: 14px; /* اندازه فونت را هم کمی کوچکتر می کنیم */
+    box-sizing: border-box;
+}
+  
+/* حذف فاصله از آخرین دکمه در ستون */
+.button-container .btn:last-child {
+    margin-bottom: 0;
+}
+  
+/* سبک های اختصاصی */
+.btn1 {
+    background-color: #008CBA;
+}
+  
+.btn2 {
+    background-color: #f44336;
+}
+/* استایل‌های عمومی مودال */
+#settings-modal {
+    display: none; /* به طور پیش‌فرض مخفی است */
+    position: fixed; /* ثابت روی صفحه */
+    z-index: 1000; /* اطمینان از اینکه بالای همه عناصر دیگر است */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* فعال کردن اسکرول در صورت نیاز */
+    background-color: rgba(0, 0, 0, 0.6); /* پس‌زمینه نیمه‌شفاف */
+    opacity: 0; /* شروع با شفافیت صفر برای انیمیشن fade-in */
+    visibility: hidden; /* شروع با مخفی بودن کامل */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* فعال کردن نمایش با کلاس hidden */
+#settings-modal.hidden {
+    opacity: 0;
+    visibility: hidden;
+    display: none; /* برای اینکه در حالت مخفی فضا اشغال نکند */
+}
+
+/* نمایان شدن مودال */
+#settings-modal:not(.hidden) {
+    display: block; /* نمایش داده شود */
+    opacity: 1;
+    visibility: visible;
+}
+
+/* محتوای اصلی مودال */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* مرکز کردن عمودی و افقی */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* عرض مودال */
+    max-width: 500px; /* حداکثر عرض */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* برای قرارگیری دکمه بستن */
+    animation: fadeInAnimation ease 0.5s; /* انیمیشن ورود */
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* انیمیشن fade-in */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9); /* کمی کوچک‌تر شروع کند */
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1); /* به اندازه اصلی */
+    }
+}
+
+/* دکمه بستن در گوشه بالا راست */
+.modal-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #aaa;
+}
+.modal-content .close-btn:hover {
+    color: #333;
+}
+
+/* عنوان مودال */
+.modal-content h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* آیتم‌های تنظیمات */
+.setting-item {
+    margin-bottom: 15px;
+    display: flex; /* برای هم‌ترازی برچسب و ورودی */
+    align-items: center;
+    gap: 10px; /* فاصله بین برچسب و ورودی */
+}
+
+.setting-item label {
+    flex: 1; /* برچسب فضا را بگیرد */
+    font-weight: bold;
+    color: #555;
+}
+
+.setting-item select,
+.setting-item input[type="range"] {
+    flex: 2; /* ورودی فضا بیشتری بگیرد */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* برای اینکه padding و border محاسبه شوند */
+}
+
+.setting-item input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* دکمه‌های اکشن مودال */
+.modal-actions {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.modal-actions .btn {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+.modal-actions .btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.modal-actions .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.modal-actions .btn:hover {
+    opacity: 0.9;
+}
+
+/* تغییرات در جاوا اسکریپت برای مدیریت کلاس hidden */
+/* در کد جاوا اسکریپت، تابع openSettingsModal باید display را block کند و کلاس hidden را حذف کند.
+   تابع closeSettingsModal باید کلاس hidden را اضافه کند. */
+
+/* اطمینان از اینکه مودال هنگام بارگذاری اولیه مخفی است */
+/* استایل‌های عمومی مودال */
+#settings-modal {
+    display: block; /* برای اینکه در ابتدا قابل دسترسی باشد */
+    position: fixed; /* ثابت روی صفحه */
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0; /* شروع با شفافیت صفر برای انیمیشن fade-in */
+    visibility: hidden; /* شروع با مخفی بودن کامل */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    /* display: none; <-- این خط را حذف کنید یا مطمئن شوید هنگام نمایش مودال، block شود */
+}
+
+/* نمایان شدن مودال */
+#settings-modal:not(.hidden) {
+    display: block; /* نمایش داده شود */
+    opacity: 1;
+    visibility: visible;
+}
+
+/* محتوای اصلی مودال */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* مرکز کردن عمودی و افقی */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* برای قرارگیری دکمه بستن */
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    /* برای مرکز کردن دقیق‌تر */
+    position: absolute; /* تغییر به absolute */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* این خط کلیدی است */
+}
+
+/* انیمیشن fade-in */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(); 
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+.modal-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #aaa;
+}
+.modal-content .close-btn:hover {
+    color: #333;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.setting-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.setting-item label {
+    flex: 1;
+    font-weight: bold;
+    color: #555;
+}
+
+.setting-item select,
+.setting-item input[type="range"] {
+    flex: 2;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.modal-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.modal-actions .btn {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+.modal-actions .btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.modal-actions .btn-secondary {
+    background-color: #f10606;
+    color: white;
+}
+
+.modal-actions .btn:hover {
+    opacity: 0.9;
+}
+
+
+#settings-modal:not(.hidden) { /* فقط زمانی که کلاس hidden ندارد */
+    display: block;
+}
+
+
+
+  
+
+  
+  
+  

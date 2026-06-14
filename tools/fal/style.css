@@ -1,0 +1,150 @@
+@import url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css');
+
+body {
+    background: url("https://i.imgur.com/0B4M8cB.jpg"); 
+    background-color: #f7d7bb; 
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Shabnam', sans-serif;
+}
+
+.fal-container {
+    max-width: 650px;
+    background: rgba(255, 235, 205, 0.85);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e09d5c;
+    box-shadow: 0 0 25px rgba(150, 75, 0, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+.fal-btn {
+    font-size: 38px;
+    color: #f79f5f; 
+    text-shadow: 0 0 3px #f5c88b; 
+}
+
+.fal-box {
+    background: rgba(255, 245, 220, 0.9); 
+    border: 1px solid #d9a37b; 
+    border-radius: 10px;
+    padding: 15px;
+    line-height: 1.9;
+    font-size: 18px;
+    color: #5a3a1c; 
+}
+
+.fal-btn {
+    background: linear-gradient(135deg, #e88d4a, #c46a2c); 
+    border: none;
+    color: white;
+    padding: 10px 26px;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.fal-btn:hover {
+    background: linear-gradient(135deg, #f0a366, #d67e3c); 
+    transform: scale(1.07);
+    box-shadow: 0 0 10px rgba(223, 164, 54, 0.7); 
+}
+
+.fal-result {
+    background: rgba(255, 250, 235, 0.95); 
+    border: 2px solid #d1a57f; 
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 18px;
+    color: #4d2c14; 
+    line-height: 1.9;
+    display: none;
+    animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+h2.text-center {
+    color: #8b4f00 !important; 
+}
+.text-center {
+    color: #654321 !important;
+}
+
+/* استایل پیش‌فرض برای نتیجه فال */
+.fal-result {
+    margin-top: 1.5rem; /* فاصله از بالا */
+}
+
+.fal-result h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem; /* اندازه فونت عنوان */
+}
+
+.short-poem {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0.5rem; 
+}
+
+/* استایل دکمه باز بسته شدن */
+#toggleFull {
+    display: block; /* دکمه را به صورت بلاک در می‌آورد تا در وسط قرار گیرد */
+    margin: 0.5rem auto 0 auto; /* وسط چین کردن دکمه */
+    background-color: #db9c62;
+    color: white !important; 
+    border: none; /* حذف حاشیه پیش‌فرض */
+    font-size: 0.9rem;
+    padding: 8px 15px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.2s ease; /* انیمیشن نرم برای تغییر رنگ */
+}
+
+#toggleFull:hover {
+    color: #de8346;
+}
+
+.full-poem {
+    color: #de8346;
+    line-height: 2;
+    text-align: center;
+    margin-top: 1rem; /* فاصله از دکمه */
+}
+
+.tarsir {
+    background: #f8f8f8;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 1.5rem; /* فاصله بیشتر از شعر کامل */
+    text-align: right; /* راست‌چین شدن متن تفسیر */
+}
+
+.tarsir h5 {
+    margin-bottom: 0.75rem;
+    color: #333;
+}
+
+.tarsir p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: #555555;
+}
+
+audio {
+    width: 100%;
+    margin-top: 1.5rem; /* فاصله از تفسیر */
+}
+
+

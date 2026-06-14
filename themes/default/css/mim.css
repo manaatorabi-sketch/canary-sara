@@ -1,0 +1,50 @@
+
+#dim{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.7 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#dim > div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.gh-modal{
+    width: 376px;
+    aspect-ratio: 1;
+    background-color:#f7d288;
+    border: 1px solid silver;
+    border-radius: 20px;
+    z-index: 101;
+    animation:gh-modal-animation 3s ;
+}
+
+@keyframes gh-modal-animation{
+    from{
+        margin-top: -60%;
+    }
+    to{
+
+    }
+}
+#loading-container{
+    direction: ltr;
+    width: 350px;
+    height: 2px;
+    background-color: black;
+}
+#loading-container #loading{
+    height: 1px;
+    width: 0px;
+    background-color: white;
+}

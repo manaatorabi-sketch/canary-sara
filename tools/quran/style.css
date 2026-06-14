@@ -1,0 +1,81 @@
+@import url('https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css');
+/* لینک Bootstrap Icons را اضافه کنید */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
+
+body {
+    background: url("https://i.imgur.com/0B4M8cB.jpg");
+    background-color: #FFDAB9;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Shabnam', sans-serif;
+}
+
+.quran-container {
+    max-width: 650px;
+    background: rgba(255, 235, 205, 0.85);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e09d5c;
+    box-shadow: 0 0 25px rgba(150, 75, 0, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+.quran-box {
+    background: rgba(255, 245, 220, 0.9);
+    border: 1px solid #d9a37b;
+    border-radius: 10px;
+    padding: 15px;
+    line-height: 1.9;
+    font-size: 18px;
+    color: #5a3a1c;
+}
+
+.quran-btn {
+    background: linear-gradient(135deg, #e88d4a, #c46a2c);
+    border: none;
+    color: white;
+    padding: 10px 26px;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    text-shadow: none;
+}
+
+.quran-btn:hover {
+    background: linear-gradient(135deg, #f0a366, #d67e3c);
+    transform: scale(1.07);
+    box-shadow: 0 0 10px rgba(223, 164, 54, 0.7);
+}
+
+.quran-result {
+    background: rgba(255, 250, 235, 0.95);
+    border: 2px solid #d1a57f;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 18px;
+    color: #4d2c14;
+    line-height: 1.9;
+    /* display: none;  این خط را کامنت یا حذف کنید */
+    animation: fadeInUp 0.8s ease; /* انیمیشن برای اولین نمایش */
+    opacity: 0; /* برای کنترل نمایش اولیه با انیمیشن */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2.text-center {
+    color: #8b4f00 !important;
+}
+
+.text-center {
+    color: #654321 !important;
+}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html dir="rtl" lang="fa-IR">
+
+<head>
+	<title>بازی</title>
+	<link rel="stylesheet" href="../../themes/default/css/bootstrap.rtl.min.css">
+	<link rel="stylesheet" href="../../themes/default/css/bootstrap-icons.min.css">
+	<script src="../../themes/default/js/jquery.min.js" defer></script>
+	<link rel="stylesheet" href="../game/style.css">
+	<script src="../game/script.js" defer></script>
+	<link rel="stylesheet" href="../../themes/default/css/mim.css">
+
+	<script src="../../themes/default/js/mim.js" defer></script>
+	<script src="../../themes/default/js/script.js?v=1.0.0.1"></script>
+	<script src="../../themes/default/js/script.defer.js?v=1.0.0.1" defer></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta http-equiv="expires" content="0">
+	<meta name="resource-type" content="document">
+	<meta name="distribution" content="global">
+	<meta name="author" content="GHanarysara">
+	<meta name="copyright" content="Copyright (c) by GHanarysara">
+	<meta name="keywords"
+		content="قناری‌ها،تغذیه آنها،نحوه زندگی‌آنها در محیط مناسب،خرید قناری,نمایش قناری‌های مختلف,نمایشگاه">
+	<meta name="description" content="دیدن صفحات اصلی و نمایش قناری‌های مختلف و خرید آنها به صورت اینترنتی یا حضوری.">
+	<meta name="robots" content="INDEX,FOLLOW">
+	<meta name="revisit-after" content="1 DAYS">
+	<meta name="rating" content="general">
+	<meta name="generator" content="GHanarysara">
+
+</head>
+
+<body>
+	<div class="ballon"></div>
+	<div class="ballon"></div>
+	<div class="ballon"></div>
+	<div class="ballon"></div>
+	<div class="ballon"></div>
+	<div class="ballon"></div>
+	<div class="ballon"></div>
+	<div class="ballon"></div>
+	<div class="ballon"></div>
+	<div class="ballon"></div>
+	<div class="timer"><i class="bi bi-alarm"></i> زمان: 25 </div>
+	<div class="message" id="lose-message">باختی! چند بادکنک همزمان!</div>
+	<div class="message" id="win-message">بردی!</div>
+
+	<!-- صداها -->
+	<audio id="pop-sound" src="https://cdn.pixabay.com/download/audio/2022/02/03/audio_5519250e9b.mp3"></audio>
+	<!-- صدای ترکیدن بادکنک -->
+
+
+
+	<div class="button-container">
+		<button class="btn settings-btn"><i class="bi bi-gear"></i> تنظیمات بازی </button>
+
+		<div id="settings-modal" class="hidden">
+			<div class="modal-content">
+				<button id="close-settings" class="btn close-btn"><i class="bi bi-x-lg"></i></button>
+
+				<h3>تنظیمات بازی</h3>
+
+				<!-- فرم تنظیمات بازی -->
+				<div class="setting-item">
+					<label for="difficulty">سطح دشواری:</label>
+					<select id="difficulty">
+						<option value="easy">آسان</option>
+						<option value="medium">متوسط</option>
+						<option value="hard">سخت</option>
+					</select>
+				</div>
+				<label for="balloonColor">رنگ بادکنک:</label>
+				<select id="balloonColor">
+					<option value="random">تصادفی</option>
+					<option value="red">قرمز</option>
+					<option value="blue">آبی</option>
+					<option value="green">سبز</option>
+					<option value="yellow">زرد</option>
+				</select>
+
+				<div class="game-container"></div>
+
+				<audio id="pop-sound"></audio>
+
+				<div class="setting-item">
+					<label for="volume">صدا:</label>
+					<input type="range" id="volume" min="0" max="100" value="80">
+				</div>
+
+				<div class="setting-item">
+					<label>
+						<input type="checkbox" id="show-tips"> نمایش راهنمایی‌ها
+					</label>
+				</div>
+
+				<div class="modal-actions">
+					<button class="btn btn-primary" id="save-settings">ذخیره تنظیمات</button>
+					<button class="btn btn-secondary" id="cancel-settings">لغو</button>
+				</div>
+
+			</div>
+		</div>
+		<button id="startButton" class="btn btn1">
+			<i id="buttonIcon" class="bi bi-pause"></i> شروع بازی</button>
+		
+		<button class="btn btn2"><i class="bi bi-arrow-counterclockwise"></i> بازگشت </button>
+	</div>
+
+
+</body>
+
+</html>
+<!-- Designed by MT-->

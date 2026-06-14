@@ -1,0 +1,452 @@
+/*:root{
+    --color:#c21d03 ;
+    --color:#fd5732 ;
+    --color: #ffb787;
+    --color: #393939;
+    --color:#bebebe ;
+    --color:#fbfbfb;
+    --color:#f1f1f1 ;
+    --color: #c8c8c8;
+    --color:#232121;
+    --color:#4b4848 ;
+    --color: ;
+}*/
+html {
+    font-size: 17px;
+}
+
+::selection {
+    background-color: darkorange;
+}
+
+dialog::backdrop {
+    background-color: #F6A401;
+}
+
+@font-face {
+    font-family: Estedad;
+    src: url(../../../themes/default/fonts/Estedad.woff2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 17px;
+}
+
+body {
+    font-family: Estedad, Tahoma;
+    /* background-color: #F6A401;
+  background-image: url(themes/default/images/gh_bg3.png); */
+    background-attachment: fixed;
+    background-image: linear-gradient(white, orange, white);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: orange;
+}
+
+p {
+    line-height: 1.6rem;
+}
+
+h2 {
+    vertical-align: top;
+    margin-bottom: 10px;
+    background-color: #F6A401;
+    border-radius: 10px;
+    margin: 10px 0px;
+    text-decoration: center;
+    text-align: center;
+}
+
+h1 {
+    background-color: rgb(255, 151, 66);
+    ;
+    border-radius: 10px;
+    margin: 10px 0px;
+    text-align: center;
+}
+h4 {
+    background-color: rgb(255, 151, 66);
+    ;
+    border-radius: 10px;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+#logo {
+    animation: logo 2s;
+    border-radius: 50%;
+}
+
+#logo {
+    animation: logoplay 2s;
+}
+
+.right-links {
+    color: orange;
+}
+
+#main-menu ul li:nth-child(5) a {
+    color: black;
+
+}
+
+#video-ghanary {
+    text-align: center;
+}
+
+#video-ghanary video {
+    box-shadow: -2px -2px 0 rgba(0, 0, 0, 0.2), -4px -4px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.gh-bg {
+    background-image: fixed;
+}
+
+main {
+    width: 950px;
+    min-height: 1000px;
+    border-block-end: 1px solid black;
+    margin: 0 auto;
+    /*background-color: white;*/
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        'header header'
+        'aside article'
+        'footer footer'
+    ;
+    gap: 10px;
+}
+
+header,
+aside,
+article,
+footer {
+    border-radius: 10px;
+    background-color: FF9D00;
+    box-shadow: rgba(100, 100, 111, 0.2) 5px 7px 29px 0px;
+}
+
+header {
+    grid-area: header;
+    margin-block-end: 10px;
+}
+
+aside {
+    grid-area: aside;
+    float: right;
+}
+
+article {
+    grid-area: article;
+}
+
+footer {
+    grid-area: footer;
+
+    direction: ltr;
+    text-align: center;
+
+}
+
+/* #up{
+    right: 20px;
+    bottom: 20px;
+    aspect-ratio: 1;
+    margin-block-end: 0 auto;
+    background-image: url(../images/up.png);
+}
+#up:hover{
+    background-position: top right;
+} */
+#main-menu ul {
+    list-style-type: none;
+    margin-block-start: 0px;
+    padding: 0px;
+}
+
+/* #main-menu ul li{
+    margin-block-start: 3px;
+}
+#main-menu ul li a{
+    padding: 6px 4px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color:#fef1c7;
+    color:#292524;
+    border-inline-start: 8px solid #f5be0b;
+    transition: 0.3s;
+    border-radius: 7px;
+}
+#main-menu ul li a:hover{
+    background-color: #f5be0b;
+    border-inline-start: 6px solid #fef1c7;
+    box-shadow: -7px 7px 0px #fef1c7;
+}
+/* #main-menu ul li a:hover::before{
+    
+} */
+/* #nav{
+    z-index: 100;
+}
+#nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin-block-end: 0;
+    text-align: center;
+}
+#nav ul li{
+    display: inline-block;
+}
+#nav ul li a{
+    border: 1px solid black;
+    border-radius: 7px 7px 0px 0px;
+    padding:6px 8px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #f5be0b;
+    color:black;
+    border-block-end: 3px solid #fef1c7;
+    transition: 0.4s;
+}
+#nav ul li a:hover{
+    background-color: #fef1c7;
+    border-block-end: 3px solid #fef1c7;
+    box-shadow: -2px 2px 0px #fef1c7;
+}  */
+#gallery {
+    text-align: center;
+}
+
+#gallery img {
+    width: 120px;
+    aspect-ratio: 1;
+    transition: 0.4s;
+    object-fit: cover;
+    border-radius: 60%;
+    margin-inline-start: 6px;
+    border-inline-end: 6px solid wheat;
+    box-shadow: 0px 0px 6px silver;
+}
+
+#gallery img:hover {
+    transform: scale(1.1) scale(1.1);
+}
+
+@keyframes logoplay {
+    from {
+        transform: translatex(-300px);
+
+    }
+
+    to {
+        transform: translatex(0px);
+
+    }
+}
+
+#logo {
+    animation: logoplay 2s;
+}
+
+#src {
+    width: 120px;
+    aspect-ratio: 1;
+    transition: 0.4s;
+    object-fit: cover;
+    border-radius: 60%;
+    margin-inline-start: 6px;
+}
+
+#src:hover {
+    transform: scale(1.1) scale(1);
+}
+
+#crs {
+    width: 120px;
+    aspect-ratio: 1;
+    transition: 0.4s;
+    object-fit: cover;
+    border-radius: 60%;
+    margin-inline-start: 6px;
+}
+
+#crs:hover {
+    transform: scale(1.1) scale(1);
+}
+
+#fig {
+    width: 120px;
+    aspect-ratio: 1;
+    transition: 0.4s;
+    object-fit: cover;
+    border-radius: 60%;
+    margin-inline-start: 6px;
+}
+
+#fig:hover {
+    transform: scale(1.1) scale(1.1);
+}
+
+/* bootstrap */
+.btn-primary {
+    --bs-btn-bg: darkblue;
+
+}
+
+/* bootstrap customization */
+.mt-6 {
+    margin-top: 4rem !important;
+}
+
+.btn {
+    background-color: darkorange;
+}
+
+.btn:hover {
+    background-color: orange;
+}
+
+.navbar {
+    background-color: darkorange;
+}
+
+/* tablet */
+@media screen and (max-width: 1024px) {
+    main {
+        width: 100%;
+    }
+
+    .main-menu {
+        display: inherit;
+    }
+
+    .header-menu {
+        display: none;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 500px) {
+    main {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+            'header'
+            'article'
+            'aside'
+            'footer'
+        ;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+#welcome {
+    position: relative;
+    top: 80px !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.mim-accordion {
+    background: #FDF3E7; 
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 100%; /* عرض ۱۰۰٪ برای ریسپانسیو بودن */
+    max-width: 400px; /* حداکثر عرض */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.mim-accordion-item {
+    border-bottom: 1px solid #f7dcae; /* خط جداکننده ملایم */
+}
+.mim-accordion-item:last-child {
+    border-bottom: none; /* حذف خط برای آخرین آیتم */
+}
+
+.mim-accordion-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    background-color: #FDC68A; /* نارنجی ملایم و گرم */
+    color: #5A2D00; /* رنگ متن قهوه‌ای تیره */
+    transition: background-color 0.3s ease;
+}
+
+.mim-accordion-title:hover {
+    background-color: #f7b76e; /* نارنجی تیره‌تر هنگام هاور */
+}
+
+.mim-accordion-title span {
+    flex-grow: 1; /* متن عنوان فضا را اشغال کند */
+}
+
+.mim-collapse {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, padding 0.5s ease-out;
+}
+
+/* نمایش متن هنگام فعال بودن */
+.mim-accordion-item.active .mim-collapse {
+    max-height: 500px; /* مقدار کافی برای نمایش محتوا */
+    opacity: 1;
+    padding: 15px 20px; /* پدینگ برای محتوای باز شده */
+}
+
+.mim-accordion-content {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #5A2D00; /* رنگ متن محتوا */
+    padding-top: 5px; /* کمی فاصله از بالای باکس */
+}
+
+.arrow-icon {
+    width: 40px; /* اندازه فلش */
+    height: 40px;
+    fill: #5A2D00; /* رنگ فلش */
+    transition: transform 0.3s ease-in-out; /* انیمیشن نرم‌تر */
+}
+
+.arrow-icon.rotate {
+    transform: rotate(180deg);
+}
+
+.btn1 {
+    direction: ltr;
+    border-radius: 10px;
+    margin: 1px 1px;
+    background-color: #e68a00; /* نارنجی تیره */
+}
+
+

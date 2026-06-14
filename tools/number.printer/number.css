@@ -1,0 +1,93 @@
+/* تنظیمات پایه برای RTL و فونت */
+:root {
+    /* اعمال جهت متن راست به چپ برای زبان فارسی */
+    direction: rtl; 
+    /* تنظیم حالت نوشتن */
+    writing-mode: horizontal-tb;  
+}
+
+body {
+    /* حذف فاصله اضافی و مرکزیت دهی */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 10px;
+    background-color: #d3bb7e; /* رنگ پس‌زمینه ملایم‌تر */
+    color: #333;
+    padding: 20px; /* کمی فاصله از لبه‌ها */
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #2c3e50; /* رنگ عنوان */
+    margin-bottom: 30px;
+}
+
+.container { /* اگر از کانتینر استفاده می‌کنی */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+label {
+    display: block; /* هر لیبل در یک خط جدا */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="number"] {
+    width: 300px;
+    padding: 10px;
+    margin: 8px 0 20px 0; /* فاصله بیشتر پایین */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; 
+    font-size: 16px;
+    text-align: right; /* تراز کردن متن داخل اینپوت به سمت راست */
+}
+
+input[type="number"]:focus {
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4); /* افکت فوکوس آبی */
+    border-color: #007bff;
+    outline: none;
+}
+
+
+button {
+    width: 25%; /* دکمه هم عرض کانتینر */
+    padding: 12px;
+    background-color: #ffa703; /* رنگ سبز برای دکمه اصلی */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* فاصله از ورودی‌ها */
+}
+
+button:hover {
+    background-color: #dba959; /* سبز تیره‌تر هنگام هاور */
+}
+
+
+pre {
+    white-space: pre-wrap; 
+    margin-top: 30px; /* فاصله بیشتر از دکمه */
+    padding: 15px;
+    background-color: #e9ecef; /* پس‌زمینه خاکستری ملایم */
+    border-radius: 6px;
+    text-align: left; /* خروجی اعداد را چپ به راست نگه می‌داریم */
+    direction: ltr; /* جهت متن خروجی را ltr قرار می‌دهیم */
+    font-family: monospace; /* فونت monospace برای خوانایی بهتر اعداد */
+    font-size: 18px; /* فونت کمی بزرگتر */
+    border: 1px dashed #aaa; /* خط چین دور خروجی */
+}

@@ -1,0 +1,14 @@
+document.addEventListener(`calculator_button`,function(){
+    // انتخاب تمام عناصری که num دارند
+    const numElements=document.querySelectorAll(`.num`);
+    numElements.forEach(numElements=>{
+        numElements.addEventListener(`click`,function(){
+            // انتخاب فیلد ورودی با آی دی`input`
+            const inputElements=document.getElementById(`input`);
+            //محتوای عنصر کلیک شده و تبدیل ان به عدد
+            const clickedTextAsNumber =+this.textContent;
+            // تنظیم مقدار فیلد ورودی به عدد کلیک شده
+            inputElements.value=clickedTextAsNumber;
+        });
+    });
+});

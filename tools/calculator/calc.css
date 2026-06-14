@@ -1,0 +1,20 @@
+#calculator{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:auto auto;
+    padding: 12px;
+    gap: 10px;
+    direction: ltr;
+}
+#calculator #keypad{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 4px;
+}
+#calculator #keypad .mode {
+    display: none; /* مخفی پیش فرض */
+    /* استایل های دیگر مانند padding, margin و ... */
+}
+
+
+
